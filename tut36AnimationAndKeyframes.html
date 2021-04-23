@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation & Keyframes</title>
+</head>
+<style>
+    .container{
+        background-color: yellowgreen;
+    }
+    .box{
+        background-color: green;
+        height: 250px;
+        width: 250px;
+        /* make position relative to move box for animation */
+        position: relative;
+        /* to create animation first give animation name */
+        /* animation-name: suraj1; */
+        /* creationg one more animation */
+        animation-name: suraj2;
+        /*how much time you want animation. use animation-duration*/
+        animation-duration: 2s;
+        /*animation iteration for how many times to run animation*/
+        animation-iteration-count: 1;
+        /* to run animation always use infinite*/
+        /* animation-iteration-count: infinite; */
+        /* animation fill mode for where to animation */
+        /* this will stop at last point */
+        /* animation-fill-mode: forwards; */
+        /* stop at begining */
+        /* animation-fill-mode:backwards; */
+        /* controling animation speed using animation-timing-function */
+        /* starts slow then becomes fast */
+        /* animation-timing-function: ease-in; */
+        /*start fast then slow  */
+        /* animation-timing-function: ease-out; */
+        /* start slow then fast then slow */
+        /* animation-timing-function: ease-in-out; */
+        /* delay in animation */
+        /* animation-delay: 3s; */
+        /* direction for animation */
+        /* direction forwards */
+        /* animation-direction: alternate; */
+        /* backwards  */
+        /* animation-direction: reverse; */
+        /* animation shorthand/shortcut */
+        /* animarion:animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-fill-mode; */
+        /* animation: suraj3 5s ease-in 1s 12 backwards; */
+    }
+
+    /* creating animation using keyframe */
+    @keyframes suraj1 {
+        /* where want to start animation */
+        from{
+            width: 200px;
+        }
+        /* ending of animation */
+        to{
+            width: 400px;
+        }
+        
+    }
+    /* creating second animation moving box in square */
+    @keyframes suraj2 {
+        /* using % instead of from and to */
+        0%{
+            top: 0px;
+            left: 0px;
+
+        }
+        25%{
+            top: 0px;
+            left: 250px;
+        }
+        75%{
+            top: 250px;
+            left: 250px;
+            
+        }
+        100%{
+            top: 250px;
+            left: 0px ;
+            
+        }
+        
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">This is box</div>
+    </div>
+    
+</body>
+</html>

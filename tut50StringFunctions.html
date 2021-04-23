@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>String Functions</h1>
+        <ol>
+            <li>indexOf()</li>
+            <li>lastIndexOf()</li>
+            <li>slice()</li>
+            <li>substring()</li>
+            <li>substr()</li>
+            <li>replace()</li>
+            <li>toUpperCase()</li>
+            <li>toLowerCase()</li>
+            <li>trim()</li>
+            <li>charAt()</li>
+            <li>charCodeAt()</li>
+        </ol>
+    </div>
+    <script>
+        var str = "This is a string";
+        // indexOf() gives first occurence of string 'is'
+        console.log(str.indexOf("is"));
+
+        //lastIndexOF() finding is at last of string
+        console.log(str.lastIndexOf("is"));
+
+        // slice() returns selected element it doesnot include last element
+        console.log(str.slice(1,6));
+
+        // substring() it takes negative also
+        var subString1=str.substring(1,6);
+        console.log(subString1);
+
+        // substr() it icludes last element/value
+        var subStr1=str.substr(1,6);
+        console.log(subStr1);
+
+        // replace() it replaces string 
+        // old str string will be same 
+        var replaced = str.replace('string','harry');
+        console.log(str)
+        console.log(replaced)
+
+        // toUpperCase() converts to upper case
+        var upperCase=str.toUpperCase();
+        console.log(upperCase)
+
+         // toLowerCase() converts to upper case
+         var lowerCase=str.toLowerCase();
+        console.log(lowerCase)
+
+        // trim() it removes spaces from start and end
+        var trim1="       this is   trim    string         ";
+        console.log(trim1.trim());
+
+        // charAt() gives character
+        var char1=str.charAt(2);
+        console.log(char1)
+
+        //charCodeAt gives unicode of character
+        var char2=str.charCodeAt(2);
+        console.log(char2)
+
+    </script>
+</body>
+</html>

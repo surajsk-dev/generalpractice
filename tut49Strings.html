@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings in JavaScript</title>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit.</h1>
+    <div id="content"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ratione dolores incidunt aut, pariatur praesentium eligendi fuga, vero natus blanditiis aliquid at magnam atque aliquam quo corrupti modi quidem officiis. Nihil assumenda voluptatem sequi.</p>
+    <script>
+        var string="this";
+        console.log(string);
+        // want to single quotes or double quotes in strings
+        // single quote print
+        var str="it's an amazing thing";
+        console.log(str);
+        // double quotes print
+         str='It"s an amazing thing';
+        console.log(str);
+
+        // template literals `` these are string literals allowing embedded expressions
+        var  name="harry";
+        var temp=`${name}`;
+        // printing with template literal 
+        console.log(temp);
+        var channel="codewithharry";
+        // we can also use single and double quotes in b\w
+        console.log(`${name} is nice "guy 'and has youtube channel called ${channel}`);
+
+        // length of string
+        var len=name.length;
+        console.log(len);
+
+        // escape sequence charcters
+        // \n=new line
+        console.log("this is \nharry");
+        // gives tab space \t
+        console.log("this is \tharry");
+        // printing backslash with double backslash
+        console.log("this is \\harry")
+
+        // inserting element ,string using javascript in html
+        document.getElementById('content').innerHTML="<h2>This is h2 from javascript</h2>";
+    </script>
+</body>
+</html>

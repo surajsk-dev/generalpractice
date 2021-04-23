@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Grid</title>
+    <style>
+        .container{
+            display: grid;
+            /* grid-template-columns: 300px 100px 100px; */
+            /* grid-template-columns: 300px auto 100px; */
+            /* grid-template-columns: 300px auto auto; */
+            /* dividing by parts */
+            /* grid-template-columns: 1fr 4fr 1fr; */
+            grid-template-columns: repeat(4,auto);
+            grid-gap: 2rem;
+        }
+
+        .item{
+            background-color: red;
+            border: 2px solid black;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">this is grid 1</div>
+        <div class="item">this is grid 2</div>
+        <div class="item">this is grid 3</div>
+        <div class="item">this is grid 4</div>
+        <div class="item">this is grid 5</div>
+        <div class="item">this is grid 6</div>
+        <div class="item">this is grid 7</div>
+        <div class="item">this is grid 8</div>
+        <div class="item">this is grid 9</div>
+        <div class="item">this is grid 10</div>
+        <div class="item">this is grid 11</div>
+        <div class="item">this is grid 12</div>
+        <div class="item">this is grid 13</div>
+        <div class="item">this is grid 14</div>
+        <div class="item">this is grid 15</div>
+    </div>
+    
+</body>
+</html>

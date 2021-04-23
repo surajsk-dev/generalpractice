@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Property Css</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .container{
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: pink;
+    }
+
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: brown;
+        border: 2px solid black;
+        font-size: 20px;
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+        /* transform rotate at 45 deg */
+        /* we can see its always at 45deg */
+        /* transform: rotate(45deg); */
+        /* using transition to make transform smooth  */
+        transition: all 1s ease-in-out;
+
+    }
+
+    .box:hover{
+        /* when hover it rotates */
+        /* but it  is not smooth so use it with transition to make smooth */
+        transform: rotate(45deg);
+        /* skew - it slightly bends box . used mostly in games*/
+        transform: skew(40deg);
+        /* scale-it becomes big */
+        transform: scale(2);
+        /* translate moves forward by default moves on X-axis below both are same  */
+        transform: translate(123px);
+        transform: translateX(123px);
+        /* translate y-axis moves verticle  */
+        transform: translateY(123px);
+        /* using both x and y */
+        transform: translate(123px,123px);
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+    
+</body>
+</html>

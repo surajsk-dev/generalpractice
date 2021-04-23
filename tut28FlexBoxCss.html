@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+    <style>
+        .container{
+            height: 544px;
+            width: 100%;
+            border: 2px solid black;
+            
+            /* makes by default row align side by side to box */
+            display: flex;
+            /* conatiner properties */
+            /* flex-direction  align in row by default*/
+                /* flex-direction: row; */
+                /* align in row in reverse direction */
+                /* flex-direction: row-reverse; */
+
+            /* flex-direction align in  column i.e, verticle */
+                /* flex-direction: column; */
+                /* align in column in reverse direction */
+                /* flex-direction: column-reverse; */
+
+            /* flex-wrap is for responsiveness */
+                 /* flex-wrap: nowrap; by defalut Not responsive */
+                 /* responsive */
+                 /* flex-wrap: wrap; */
+                 /* wraping reverse */
+                 /* flex-wrap: wrap-reverse; */
+
+            /* flex-flow: shortcut or shorthand for flex-direction and flex-wrap */
+                /* flex-flow: row-reverse wrap; */
+
+            /* justify-content: align items; */
+                /* make center */
+                /* justify-content: center; */
+                /* space-between makes no space in corner only spaces in between box */
+                /* justify-content: space-between; */
+                /* space-evenly start to end space evenly */
+                /* justify-content: space-evenly; */
+                /* space-around every box will haves its own space */
+                /* justify-content: space-around; */
+            
+            /* align-items make  align items */
+                /* center it makes vertically center */
+                /* align-items: center; */
+                /* flex-end use to align at end of container */
+                /* align-items: flex-end; */
+                /* flex-start align at start */
+                /* align-items: flex-start; */
+                /* stretch gives verticle space */
+                /* align-items: stretch; */      
+                   
+        }
+        .item{
+            background-color: tomato;
+            border: 2px solid green;
+            width: 200px;
+            height: 50px;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        /* item properties */
+        #item-1{
+
+           
+        }
+
+        #item-2{
+            
+        }
+        #item-3{
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Flexbox Tutorial</h1>
+    <div class="container">
+    <div class="item" id="item-1">First Box</div>
+    <div class="item" id="item-2">Second Box</div>
+    <div class="item" id="item-3">Third Box</div>
+    
+    </div>
+</body>
+</html>
