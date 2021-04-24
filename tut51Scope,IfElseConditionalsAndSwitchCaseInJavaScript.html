@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope,If-Else Conditionals and Switch Case in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Scope,If-Else Conditionals and Switch Case in JavaScript</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, tenetur non. Eligendi ullam reprehenderit ab molestiae placeat nesciunt distinctio animi corporis, beatae ut mollitia quae quam nostrum minus, voluptate quod id, molestias officia veritatis.</p>
+    </div>
+    <script>
+
+        // her using var we can see that we can change its value anytime 
+        // so its scope is global
+        var string1="This is string1"
+        var string1="this is string2"
+        console.log(string1)
+
+        // but if we have requirement to not change value then we have to use 'let' and 'const' 
+        // let is scope block level and we can cannot change its value two times at golbal level or block level
+        // here let is gobal level
+        let a=5;
+        // here if change value of let two time it gives error
+        // let a=6;
+        {
+            // but here we can see that we can change value at block level
+            let a=6;
+            console.log(a)
+        }
+        console.log(a) 
+        // here let is better than var so use let from now 
+
+        // const is constant we cannot change its value anywhere
+        const b=10;
+        // if we change const it will give error already declared
+        // const b=15;
+        console.log(b)
+
+        // when to use let and const
+        // let is used when we might feel that its value might change i future
+        // const is used when we think accidentally we would change it but we should not change it
+
+
+        // condtionals
+        // if else,else if
+
+        let age=44;
+        // if is executed when age>18 condition is satisfied
+        if(age>18){
+            console.log("you can drink water");
+        }
+        // else if is executed when age==4 condition is satisfied
+        else if(age==4){
+            cosnole.log("you can drink");
+        }
+        // else if is executed when age==10 condition is satisfied
+        // else if can be written any number of times 
+        else if(age==10){
+            cosnole.log("you can have chocolates");
+        }
+        // else is executed when none of above we satisfied
+        else{
+            console.log("drink juice")
+        }
+
+
+        // switch case
+        // switch case is also based on conditions we condition satified then execute else executes default
+        // it also has break because if break is not there if one condition satisfies it will automatically executes remaining conditions without checking conditions
+        const cups=4;
+        switch (cups) {
+            // it checks value is 4 or not if satisfies executes it
+            case 41:
+                console.log("value is 41")
+                break;
+
+            case 4:
+                console.log("value is 4")
+                break;
+        
+            default:
+                console.log("value is none of above")
+                break;
+        }
+
+
+    </script>
+</body>
+</html>
