@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops In JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Loops In JavaScript</h1>
+        <li>for loop</li>
+        <li>forEach loop</li>
+        <li>for of loop</li>
+        <li>for in loop</li>
+        <li>while loop</li>
+        <li>do while loop</li>
+    </div>
+    <script>
+        // simple for loop
+        // for(i=0;i<3;i++){
+        //     console.log(i)
+        // }
+        // it prints  0,1,2
+
+        // for using array
+        let friends=["Rohan","Sanjeev","Deepti","Pooja","SkillF"];
+        for (let index = 0; index < friends.length; index++) {
+            console.log(friends[index]);
+        }
+
+        // forEach modern way of loop
+        // it is much simple
+        friends.forEach(function f(element) {
+            console.log("Hello friend, "+element+" to modern JavaScript 'for each loop'")
+        });
+
+        // for of loop
+        // it is more simple
+        for (element of friends) {
+            console.log("Hello friend, "+element+" to modern JavaScript 'for of loop'")            
+        }
+
+
+        // employee object
+        let employee={
+            name:"suraj",
+            salary:10,
+            channel:"anonymous"
+        }
+        // for in loop for object iteration
+        for ( key in employee) {
+            // using key 
+            console.log(`The ${key} of employee is ${employee[key]} 'for in loop'`)
+        }
+
+        // while loop
+        let i=0;
+        while(i<4){
+            console.log(i);
+            // increment else it will loop infinite
+            i++;
+        }
+
+        // do while loop it will execute atleast 1 time
+        let j=42;
+        do{
+            // here it prints 42 because it execute atleast once without checking condition
+            console.log(`${j} is less than 4 we are in do while loop`);
+            j++;
+        }while(j<4);
+    </script>
+</body>
+</html>
