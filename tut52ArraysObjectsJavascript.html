@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects in JavaScript</title>
+</head>
+<body>
+
+    <div class="conatiner">
+        <h1>Arrays and objects in JavaScript</h1>
+    </div>
+
+    <script>
+        // creating object
+        // objects are key value pairs
+        let employee={
+            // here key is name and value is harry
+            name:"harry",
+            salary:20,
+            channel1:"codewithharry",
+            // here we are giving space between key i,e "channel 2" so we need to use quotes
+            'channel 2':"programmingwithharry"
+        }
+        console.log(employee)
+        // accessing object items 
+        // first way
+        console.log(employee.channel1);
+        // second way with space in key
+        console.log(employee['channel 2'])
+        // both are same we can use any
+
+
+        // Array
+        // array are also object kind with any kind of datatype
+        // creating array 1st way
+        let names=[2,5,1,"harry",undefined];
+        console.log(names)
+
+        // creating array using new keyword
+        let names2=new Array(8,6,25,"suraj");
+        console.log(names2)
+
+        // length of array
+        console.log("names lenght is: "+names.length) 
+        console.log("names2 lenght is: "+names2.length) 
+
+        // sorting array
+        names=names.sort();
+        names2=names2.sort();
+        console.log(names) 
+        console.log(names2) 
+
+        // adding element in array with push
+
+        names.push("this is push");
+        console.log(names)
+
+        // creating empty array with 23 undefined values
+        let names3=new Array(23);
+        console.log(names3);
+
+    </script>
+
+</body>
+</html>
