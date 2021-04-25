@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Events and Listeners in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Events and Listeners in JavaScript</h1>
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo fuga optio totam sint aliquid architecto expedita quis hic rem saepe, culpa libero, voluptas maxime laudantium? Quia aperiam repellat asperiores porro fugiat autem esse culpa numquam itaque repudiandae nihil quaerat accusantium, quibusdam architecto excepturi iusto pariatur ea quae rerum odio? Quae iure ea animi excepturi! Consequuntur libero voluptas reiciendis quam quidem pariatur soluta veniam obcaecati fugiat dolor ratione cum dolorum perferendis neque, at quas accusantium aspernatur quisquam ipsam voluptates rem nemo asperiores. Quo rem culpa aspernatur at eaque pariatur laborum ipsum doloribus ipsa. Fugiat officiis voluptatem cupiditate laudantium. Odio iure consequuntur pariatur nobis labore ut voluptatum porro reprehenderit obcaecati dolor sapiente, officiis sunt id voluptate. Nihil illo, ex aut magni repudiandae voluptates, a voluptatibus quidem nisi voluptate eaque, dicta libero eveniet maxime nesciunt tempore! Laborum repellat quidem perferendis porro impedit, illo delectus corporis quia voluptas vero nobis earum nesciunt a asperiores!
+        </p>
+        <!-- creating button with function to show/hide on click -->
+        <button id="btn" onclick="toggleHide()">Show/Hide Paragraph</button>
+        <h3> Browser Events</h3>
+        <ul><li>click</li>
+            <li>contextmenu-use when we right click</li>
+            <li>mouseover/mouseout- mouseover occurs when mouse is in element. mouseout occurs when mouse is outside element</li>
+            <li>mousedown/mouseup-mousedown occurs when mouse button is pressed on element.mouseup occurs when we release mouse button</li>
+        </ul>
+        <h3>form events</h3>
+        <ul><li>submit</li>
+            <li>focus-when we focus on input tag</li>
+        </ul>
+        <h3>dom content loaded- it occurs when our html dom completely loads</h3>
+        <h3>css</h3>
+        <li>transitioned-when we do transition</li>
+        <h3>etc, many more</h3>
+
+    </div>
+    <script>
+
+        // hide para when click on button 
+        // function to do so
+        function toggleHide(){
+            // get para
+            let para=document.getElementById('para');
+
+            // condition when click on button hide/show
+            // condition to hide para
+            if(para.style.display != 'none'){
+                // hiding para
+                para.style.display='none'
+            }
+            else{
+                // showing para
+                para.style.display='block'
+            }
+        }
+
+        // using addEventListener() on para
+        // when mouseover event occurs console mouse inside
+        //  and when mouseout event occurs console mouse out
+        
+        // getting para
+        let para=document.getElementById('para');
+        // mouse inside
+        para.addEventListener('mouseover',function run(){
+            console.log('mouse inside')
+        });
+
+        // mouse outside
+        para.addEventListener('mouseout', function run(){
+            console.log('mouse outside')
+        });
+
+
+
+        
+    </script>
+</body>
+</html>
