@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigating Manipulating Dom</title>
+</head>
+<body>
+    <div class="container" id="main">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>More About Us</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Manipulating Dom-Document Object Model
+    </div>
+    <script>
+        // getting element using id
+        // let main=document.getElementById('main');
+        // // we cna see everything witn element 'id'
+        // console.log(main);
+
+        // // changing element using id
+        // let nav=document.getElementById('nav');
+        // // we can see all <li>'s
+        // console.log(nav);
+        // // changing content <li>
+        // nav.innerHTML="<li>Dynamic content</li>";
+
+        // get element using  class
+        // there can be same clases for mutliple elements
+        // let containers=document.getElementsByClassName('container');
+        // we can se output in collection as array
+        // so,to access we can use class as array with index
+        // console.log(containers);
+        // // selecting first container using index
+        // console.log(containers[0]);
+        // // selecting second container using index
+        // console.log(containers[1]);
+        // // changing data
+        // containers[0].innerHTML="<li>FIrst Container</li>";
+        // containers[1].innerHTML="second Container";
+
+        //use css selectors using query selectors
+        // css class
+        // let cssSel=document.querySelector('.container');
+        // // it gives first class
+        // console.log(cssSel);
+
+        //css id
+        // let cssSel=document.querySelector('#nav>li');
+        // // it gives first nav li
+        // console.log(cssSel);
+
+        // to select all elements
+        // use querySelectorAll
+        //css id
+        let cssSel=document.querySelectorAll('#nav>li');
+        // it gives all nav li
+        console.log(cssSel);
+
+        // changing data
+        // cssSel[0].innerHTML="first li";
+
+        // cssSel[1].innerHTML="2 li";
+
+
+
+
+
+        
+
+    </script>
+</body>
+</html>
