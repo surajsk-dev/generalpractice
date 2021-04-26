@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout and setInterval in JavaScript</title>
+</head>
+<body>
+
+    <div class="container">
+        <h3>setTimeout() and setInterval() in JavaScript</h3>
+        <h3>clearTimeout() and clearInterval() to clear setTimeout() and setInterval() respectively. </h3>
+
+        <h1>creating clock using setInteval</h1>
+        <h2>Time Now is <span id="time"></span></h2>
+    </div>
+
+    <script>
+        // when we want to run a function after some time then we use setTimeout() and setInterval()
+        
+        // first will create a function
+        // function greet(){
+        //     console.log("Good Morning");
+        // }
+
+        // setTimeout() - it runs function only once after interval of time
+        // setTimeout(greet,5000);        
+        // this runs function after 5 seconds we give time in milli seconds
+
+        // function with multiple arguments
+        function greet(name,byeText){
+            console.log("Good Morning " + name +" " + byeText);
+        }
+        // setTimeout with multiple arguments
+        // setTimeout(greet,5000,"Suraj","take care");
+
+        // clearTimeout- suppose we dont want to run function then we can stop it using clearTimeout for setTimeout
+        // to do so store setTimeout in variable
+
+        // timeoutId=setTimeout(greet,1000,"Suraj","take care");
+        // console.log(timeoutId)
+        //this also gives us id using id also we can stop function
+
+        // clearTimeout with id
+        // clearTimeout(1);
+
+        // clearTimeout with  variable 
+        // clearTimeout(timeoutId);
+
+        // setInterval() - it runs function repeatedly after interval of time
+
+        // setInterval(greet, 1000,"suraj","take care");
+
+
+        // clearInterval- suppose we dont want to run function then we can stop it using clearInterval for setInterval
+        // variable to clearInterval
+        // intervalId = setInterval(greet, 1000,"suraj","take care");
+
+        // // clearInterval with intervalId
+        // clearInterval(intervalId);
+
+        // similarly using setInterval we can create clock
+        
+        // create function to diplay time
+        function displayTime(){
+            // store time in currentTime
+            currentTime=new Date();
+            // printing time on console
+            // console.log(currentTime);
+            // getting element
+           let timeElement=document.getElementById('time');
+            //setting it on html 
+            timeElement.innerHTML=currentTime;
+        }
+        
+        // display time every one second
+        setInterval(displayTime,1000);
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
