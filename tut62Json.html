@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>JSON in JavaScript</h1>
+        <p>JSON - Stands for JavaScript Object Notation. It is format to store and transport data.</p>
+    </div>
+
+    <script>
+        // /create object
+        let jsonObj={
+            name:"suraj",
+            channel:"nil",
+            food:"bhindi"
+        }
+        // it gives o/p as object
+        console.log(jsonObj);
+
+        // we can transfer this object as string by converting to string using stringyfy
+        let objToString=JSON.stringify(jsonObj);
+        // now it gives string
+        console.log(objToString);
+
+        //we can manipulate this string using string function
+        let mpString=objToString.replace("suraj","bunty");
+        // replaced name
+        console.log(mpString)
+
+        // again converting string to object using parse
+        // note pass valid json string
+        let newObjJosn=JSON.parse(mpString);
+        console.log(newObjJosn);
+
+    </script>
+    
+</body>
+</html>
