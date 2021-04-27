@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object in JavaScript</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Math Object in JavaScript</h1>
+    </div>
+
+    <script>
+        // math object provides properties and methods for mathematical constants & functions
+        let m= Math;
+        // prints constants and functions
+        console.log(m);
+        // prints constants
+        console.log("value of Math.E is: ",Math.E);
+        console.log("value of Math.PI is: ",Math.PI);
+        console.log("value of Math.LN2 is: ",Math.LN2);
+        console.log("value of Math.SQRT2 is: ",Math.SQRT2);
+
+        // functions from Math object
+
+        // Math.round():rounds number to nearest integer
+        let rd=Math.round(3.2);
+        let rd2=Math.round(3.6);
+        console.log("round of 3.2 is: "+rd);
+        console.log("round of 3.6 is: "+rd2);
+
+        // Math.pow() - power
+        let pow1=Math.pow(3,2);
+        console.log("3 to power 2 is : "+pow1);
+
+        // sqrt()- root
+        let sqrt1=Math.sqrt(50);
+        console.log("square root of 50 is : "+sqrt1);
+
+        // ceil()-rounds up to nearest integer
+        let cl=Math.ceil(3.2);
+        console.log("ceil of 3.2 is : "+cl);
+
+        // floor()-rounds down to nearest integer
+        let fl=Math.floor(3.8);
+        console.log("floor of 3.8 is : "+fl);
+
+        // abs()- gives absolute value positive
+        let abs1=Math.abs(5.66);
+        let abs2=Math.abs(-5.66);
+        console.log("abs1 value 5.66 is : "+abs1);
+        console.log("abs2 value -5.66 is : "+abs2);
+
+        // trignometric function- always give value in radian do not use degree
+
+        let sinPi=Math.sin(Math.PI);
+        let sinPih=Math.sin(Math.PI/2);
+        console.log("sin(PI) value is :"+sinPi);
+        console.log("sin(PI/2) value is :"+sinPih);
+        // similarly we can use cos,tan etc
+
+
+        // min()-minimum value
+        let min1=Math.min(4,5,6);
+        console.log("min value: "+min1);
+
+        // max()-maximum value
+        let max1=Math.max(4,5,6);
+        console.log("min value: "+max1);
+
+        // random()- generate random value by default between 0 and 1
+        let ran1=Math.random();
+        console.log(ran1);
+
+        // generating random value between specifi number use formulae
+        // formulae between a and b number = a+(b-a)*Math.random()
+        let a=1;
+        let b=100;
+        let r1_100=a+(b-a)*Math.random();
+        console.log("random number between a and b,1-100 is : "+r1_100);
+    </script>
+
+</body>
+
+</html>
