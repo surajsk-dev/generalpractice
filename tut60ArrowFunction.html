@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Arrow Function in JavaScript</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quibusdam tenetur unde debitis illo culpa ab facilis excepturi assumenda similique perspiciatis ex ipsa accusantium saepe, quis porro quos omnis nihil dolore. Earum, nesciunt unde?</p>
+    </div>
+
+    <script>
+        // Arrow function- it is an shortcut for function
+
+        // noramal function
+        // function greet(){
+        //     console.log("Good Morning");
+        // }
+
+        // Arrow function
+        let greet=()=>{
+            console.log("arrow good morining")
+        }
+        // calling function
+        greet();
+
+        // where we can use
+        setTimeout(() => {
+            console.log("setTimeout good morning")
+        }, 5000);
+
+        // using arrow with arguments
+        // let sum=(a,b)=>{
+        //     return a+b;
+        // }
+        // console.log(sum(4,5));
+
+        // we can make sum() more short by removing return keyword and curly braces
+        let sum1=(a,b)=>a+b;
+        console.log("sum is: "+sum1(7,8));
+
+        // arrow function with one argument no need of brackets
+        let half=a=>a/2;
+        console.log("half: "+half(4));
+
+        // empty () arrow function -if no argument compulsory empty ()
+        let greet1=()=>console.log("greet1 ")
+        greet1();
+
+        // lexical this-if this dont have this variable in function it will check variable in enclosing scope until it finds it
+        // normal function doesnt support it
+        let obj1={
+            names:["suraj","harry","djkhiladi"],
+            greeting:"i am not in scope",
+            speak(){
+                // with arrow function
+                this.names.forEach((student)=>{
+                    // here greeting is out of scope
+                    console.log(this.greeting+" "+student)
+                });
+                // without arrow function
+                // this.names.forEach(function greet(student){
+                //     // here greeting is out of scope
+                //     console.log(this.greeting+" "+student)
+                // });
+            }
+        }
+        obj1.speak();
+    </script>
+
+</body>
+</html>
