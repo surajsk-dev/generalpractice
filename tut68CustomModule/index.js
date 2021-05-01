@@ -11,3 +11,5 @@ const mod = require('./module');
 console.log(mod.avg([1,2,3]));
 
 
+console.log(mod.name);
+console.log(mod.learning);
