@@ -5,11 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#{title}</title>
+    style
+        include ../static/style.css
 </head>
 <body>
-    <h1>
-       | #{content}
-    </h1>
+    <div id="navbar">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>To Join - Please Fill The Form Below</h1>
+        <form action="" method="POST" id="contact">
+            <input type="text" id="name" name="name" placeholder="Enter Your Name">
+            <input type="text" id="age" name="age" placeholder="Enter Your Age">
+            <input type="text" id="gender" name="gender" placeholder="Enter Your Gender">
+            <textarea name="about" id="about" cols="30" rows="10" placeholder="Tell Us About Yourself"></textarea>
+            <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter Your Address"></textarea>
+            <button id="btn">Submit</button>
+        </form>
+    </div>
     
 </body>
 </html>
