@@ -1,0 +1,25 @@
+Searching/Querying data
+
+data based on specified condition
+> db.items.find({rating:4.5})
+
+greater than
+>db.items.find({rating:{$gt:3.5}})
+
+greater than equal to
+>db.items.find({rating:{$gte:3.5}})
+
+less than
+>db.items.find({rating:{$lt:3.5}})
+
+And Operator(both condition should satisfy)
+-----------------
+based on two condition
+>db.items.find({rating:{$gte:3.5},price:{$gt:4000}})
+
+less than and greater than
+>db.items.find({rating:{$lt:4.5},price:{$gt:4000}})
+
+Or operator(any one condition should satisfy)
+-----------------
+db.items.find({$or:[{rating:{$lt:3.5},price:{$gt:120000}}]})
