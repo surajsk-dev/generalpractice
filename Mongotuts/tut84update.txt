@@ -1,0 +1,15 @@
+>mongod
+>mongo
+
+>show dbs
+>use surajKart
+
+>show collections
+
+>db.items.find()
+
+update one entry or first entry if duplicate
+>db.items.update({name:"mi note"},{$set:{price:800}})
+
+update many or all entries - multiple
+>db.items.updateMany({name:"mi note"},{$set:{price:500,rating:3}})
