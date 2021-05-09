@@ -1,0 +1,12 @@
+// use - create/use database - if db available it will switch and use else create a db and switch to use
+>use surajKart
+swithched to db surajKart
+
+// One- inserting one object data
+db.items.insertOne({name:"samsung 20",price:20000,rating:4.5,qty:200,sold:100})
+
+//find()- checking/showing data
+db.items.find()
+
+//Many- inserting multiple objects/data: it takes an array
+db.items.insertMany([{name:"samsung 20",price:20000,rating:4.5,qty:200,sold:100},{name:"mi note",price:12000,rating:4.2,qty:1000,sold:800}])
