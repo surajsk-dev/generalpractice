@@ -1,0 +1,14 @@
+>mogod
+>mongo
+
+>show dbs
+
+>use surajKart
+
+>db.items.find()
+
+delete one entry or delete first entry in case of duplicate
+>db.items.deleteOne({rating:3.5})
+
+delete all document entry-Many
+>db.items.deleteMany({price:12000})
